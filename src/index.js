@@ -1,4 +1,4 @@
-function isPrime(number) {
+export function isPrime(number) {
   if (number < 1)
       return "Число не может быть меньше единицы.";
 
