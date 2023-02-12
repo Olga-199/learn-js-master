@@ -1,12 +1,9 @@
-import { multiply } from "../index.js";
+const isPrime = require('../index')
 
-xdescribe("test multiply", () => {
-  it("multiply 1 * 0 to equal 0", () => {
-    const result = multiply(1, 0);
-    expect(result).toBe(0);
-  }),
-    it("multiply 1 * 1 to equal 1", () => {
-      const result = multiply(1, 1);
-      expect(result).toBe(1);
-    });
+describe("Проверка счёта на убываение", () => {
+    it("3 = 321", () => expect(isPrime(3)).toBe("321"));
+    it("5 = 54321", () => expect(isPrime(5)).toBe("54321"));
+    it("0 = error", () => expect(isPrime(0)).toBe("Число не может быть меньше единицы."));
+    it("103 = error", () => expect(isPrime(103)).toBe("Число не может быть больше ста."));
+    it("3.3 = error", () => expect(isPrime(3.3)).toBe("Ожидается целое число."));
 });
